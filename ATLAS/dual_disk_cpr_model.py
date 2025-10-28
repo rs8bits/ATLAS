@@ -97,14 +97,15 @@ if __name__ == "__main__":
     # ====== Example Disk Configurations ======
     disks = [
         DiskType("HDD", 30000, 81000, 0.00049),
-        # DiskType("SSD", 34000, 82000, 0.00097),
-        DiskType("SSD", 39000, 88000, 0.0042),
+        DiskType("SSD-general", 34000, 82000, 0.00097),
+        DiskType("SSD-general-V2", 39000, 88000, 0.00098),
+        DiskType("SSD", 39000, 88000, 0.0042)
     ]
 
     # ====== System Parameters ======
     C_server = 2.201     # Base server cost (USD)
-    V_i = 100            # Log disk capacity (GB)
-    V_j = 100            # Data disk capacity (GB)
+    V_i = 150            # Log disk capacity (GB)
+    V_j = 150            # Data disk capacity (GB)
     r_values = [0.0, 0.5, 0.95,1.0]  # Read ratio
 
     # ====== Font Settings for English Output ======
