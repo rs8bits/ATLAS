@@ -12,7 +12,7 @@ class DiskType:
     name: str      # Disk name
     W: float       # Write throughput as log disk (ops/s)
     R: float       # Read throughput as data disk (ops/s)
-    M: float       # Price per GB (USD/GB)
+    M: float       # Price per GB
 
 # =========================
 # Cost Model
@@ -97,13 +97,14 @@ if __name__ == "__main__":
     # ====== Example Disk Configurations ======
     disks = [
         DiskType("HDD", 30000, 81000, 0.00049),
-        DiskType("SSD-general", 34000, 82000, 0.00097),
-        DiskType("SSD-general-V2", 39000, 88000, 0.00098),
-        DiskType("SSD", 39000, 88000, 0.0042)
+        # DiskType("HDD-high", 32000, 81500, 0.0014),
+        # DiskType("SSD-general", 34000, 82000, 0.00097),
+        # DiskType("SSD-general-V2", 35000, 83000, 0.00098),
+        DiskType("SSD", 39900, 89000, 0.0042)
     ]
 
     # ====== System Parameters ======
-    C_server = 2.201     # Base server cost (USD)
+    C_server = 3.696     # Base server cost (USD)
     V_i = 150            # Log disk capacity (GB)
     V_j = 150            # Data disk capacity (GB)
     r_values = [0.0, 0.5, 0.95,1.0]  # Read ratio
